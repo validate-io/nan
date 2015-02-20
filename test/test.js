@@ -1,3 +1,5 @@
+/* global require, describe, it */
+'use strict';
 
 // MODULES //
 
@@ -17,7 +19,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'validate.io-nan', function tests() {
-	'use strict';
 
 	it( 'should export a function', function test() {
 		expect( isnan ).to.be.a( 'function' );
@@ -25,19 +26,21 @@ describe( 'validate.io-nan', function tests() {
 
 	it( 'should positively validate', function test() {
 		assert.ok( isnan( NaN ) );
+		assert.ok( isnan( new Number( NaN ) ) );
 	});
 
 	it( 'should negatively validate', function test() {
 		var values = [
-				true,
-				[],
-				'5',
-				function(){},
-				null,
-				{},
-				5,
-				undefined
-			];
+			true,
+			[],
+			'5',
+			function(){},
+			null,
+			{},
+			5,
+			new Number( 5 ),
+			undefined
+		];
 
 		for ( var i = 0; i < values.length; i++ ) {
 			assert.ok( !isnan( values[i] ) );
