@@ -1,6 +1,6 @@
 {
   "name": "validate.io-nan",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Validates if a value is NaN.",
   "author": {
     "name": "Athan Reines",
