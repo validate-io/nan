@@ -31,6 +31,8 @@ var bool = isnan( value );
 // returns true
 ```
 
+__Note__: the method first validates that a `value` is `numeric` before validating if the `value` is `NaN`. For non-numeric value, the method returns `false`.
+
 
 ## Examples
 
