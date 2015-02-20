@@ -30,7 +30,11 @@
     "number",
     "numeric",
     "non-numeric",
-    "nan"
+    "nan",
+    "is",
+    "isnan",
+    "type",
+    "check"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/nan/issues"
